@@ -18,7 +18,7 @@ form.addEventListener(
         }
         else {
             const mensagemEnvio = "Olá, gostaria de mais informações!"
-                + "\n *Nome*: " + nome
+                + "\n\n *Nome*: " + nome
                 + "\n *Telefone*: " + tel
                 + "\n *Qual sua dúvida?* " + mensagem
 
