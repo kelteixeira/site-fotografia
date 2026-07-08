@@ -18,9 +18,9 @@ form.addEventListener(
         }
         else {
             const mensagemEnvio = "Olá, gostaria de mais informações!"
-                + "\n\n *Nome*: " + nome
-                + "\n\n *Telefone*: " + tel
-                + "\n\n *Qual sua dúvida?* " + mensagem
+                + "\n *Nome*: " + nome
+                + "\n *Telefone*: " + tel
+                + "\n *Qual sua dúvida?* " + mensagem
 
             let linkWhats = `https://wa.me/5543991928501?text=${encodeURIComponent(mensagemEnvio)}`;
 
