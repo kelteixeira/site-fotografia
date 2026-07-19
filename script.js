@@ -2,18 +2,23 @@ const form = document.getElementById("form");
 const telefone = document.getElementById("tel");
 
 telefone.addEventListener("input", function () {
-
-    let valor = telefone.value.replace(/\D/g, "");
+    let valor = this.value.replace(/\D/g, "");
     if (valor.length > 11) {
         valor = valor.slice(0, 11);
     }
-    if (valor.length > 2) {
-        valor = "(" + valor.substring(0, 2) + ")" + valor.substring(2);
+    if (valor.length <= 2) {
+        valor = valor.replace(/^(\d*)/, "($1");
+    } else if (valor.length <= 3) {
+        valor = valor.replace(/^(\d{2})(\d*)/, "($1) $2");
+    } else if (valor.length <= 7) {
+        valor = valor.replace(/^(\d{2})(\d)(\d*)/, "($1) $2 $3");
+    } else {
+        valor = valor.replace(
+            /^(\d{2})(\d)(\d{4})(\d*)/,
+            "($1) $2 $3-$4"
+        );
     }
-    if (valor.length > 9) {
-        valor = valor.substring(0, 9) + "-" + valor.substring(9);
-    }
-    telefone.value = valor;
+    this.value = valor;
 });
 
 function validarTelefone(telefone) {

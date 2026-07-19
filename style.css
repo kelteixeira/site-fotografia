@@ -29,7 +29,7 @@ header ul li a {
     color: #b4522a;
     background-color: #f4f1ea;
     padding: 10px 20px;
-    border-radius: 8px;
+    border-radius: 10px;
 }
 .menu:hover {
     color: #6b6f3c; 
@@ -144,6 +144,7 @@ hr {
 }
 .texto-pacote h3 {
     color: #b4522a;
+    margin-left: 30px;
 }
 .texto-pacote ul {
     list-style: none;
@@ -322,6 +323,8 @@ footer {
     .texto-pacote {
         width: 100%;
         flex: none;
+        text-align: left;
+        margin-left: 120px;
     }
     .img-pacote {
         justify-content: center;
